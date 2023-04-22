@@ -1,0 +1,18 @@
+bool checkIdentical(node* root){
+    if(root==NULL)
+    return true;
+    
+    if(r1==NULL && r2==NULL)
+    return true;
+    
+    if(r2!=NULL && r1==NULL)
+    return false;
+    
+    if(r1!=NULL && r2==NULL)
+    return false;
+    
+    bool a=r1->data==r2->data;
+    
+    if(r1 && r2 && a)
+    return true;
+}
