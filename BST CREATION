@@ -1,10 +1,3 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <bits/stdc++.h>
 
@@ -74,6 +67,23 @@ Node* leverOrderTraversal(Node* root){
     }
     return root;
 }
+bool searchItem(Node* root,int ele){
+    Node* temp=root;
+    
+    while(temp!=NULL){
+      
+        if(temp->data==ele)
+        return true;
+        
+        if(temp->data>ele)
+        temp=temp->left;
+        
+        if(temp->data==ele)
+        temp=temp->right;
+        
+    }
+    return false;
+}
 int main()
 {
    Node* root=NULL;
@@ -81,5 +91,10 @@ int main()
 cout<<"Enter the data for bst "<<endl;
 takeinput(root);
 leverOrderTraversal(root);
+
+cout<<"search elemnt"<<endl;
+int ele=27;
+bool a=searchItem(root,ele);
+cout<<a<<endl;
     return 0;
 }
