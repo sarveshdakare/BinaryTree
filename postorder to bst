@@ -1,0 +1,19 @@
+Node* solve(int post[],int s,int e){
+    if(s>e){
+        return NULL;
+    }
+    int mid=(s+e)/2;
+    temp->left=NULL;
+    temp->right=NULL;
+    
+    temp->left=solve(post,s,mid-1);
+    temp->right=solve(post,mid+1,e);
+    
+    return temp;
+}
+Node *constructTree (int post[], int size)
+{
+//code here
+sort(post,post+size);
+return solve(post,0,size-1);
+}
